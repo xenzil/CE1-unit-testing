@@ -182,7 +182,7 @@ public class TextBuddy {
 	}
 
 	// method to add text
-	private static ArrayList<String> addText(String text) throws IOException {
+	protected static ArrayList<String> addText(String text) throws IOException {
 		text = text.substring(1, text.length());
 		BufferedWriter mainWriter = new BufferedWriter(new FileWriter(file, true));
 		mainWriter.write(text + System.getProperty("line.separator"));
@@ -194,7 +194,7 @@ public class TextBuddy {
 	}
 
 	// method to display text
-	private static ArrayList<String> displayFile() throws IOException {
+	protected static ArrayList<String> displayFile() throws IOException {
 		int listIndex = 1;
 		File tempFile = file;
 		String line;
@@ -217,7 +217,7 @@ public class TextBuddy {
 	}
 
 	// method to delete line
-	private static ArrayList<String> deleteLine(String indexString) throws IOException {
+	protected static ArrayList<String> deleteLine(String indexString) throws IOException {
 		BufferedReader mainReader = new BufferedReader(new FileReader(file));
 		String currentLine;
 		int listIndex = 1;
